@@ -11,7 +11,8 @@ In Source it can be found "random_forests_with_missing_values.R" which contains 
 
 The file Create_datasets contains the codes to create the training datasets and the testing datasets. While the file Create_RF_and_Predict_RF contains the codes to create the Random Forests using our approach and to predict new observations with missing values accordingly to the procedure describe in "Regression with Missing Data, a Comparison Study of Techniques Based on Random Forests"
 
-Finally, the file Calculate_MSE contains the codes to calculate the MSE,
+Finally, the file Calculate_MSE contains the codes to calculate the MSE.
+
 ---
 **License**: All the code is under the [GNU GPL v3](https://www.gnu.org/licenses/gpl.html) license or any posterior version.
 
