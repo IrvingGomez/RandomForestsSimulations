@@ -1,7 +1,5 @@
 rm(list = ls())
 
-setwd("/home/dmitri/Documents/Research/Codes/Random_Forests_Simulations/Datasets/Training/")
-
 # library the sigmoid function
 library(sigmoid)
 

@@ -2,48 +2,48 @@ rm(list = ls())
 
 # We read the estimated y_values
 test_comp_y_hat <- readRDS("test_yy_COMP.rds")
-test_MCAR_5_y_hat <- readRDS("test_yy_MCAR_5.rds")
-test_MCAR_10_y_hat <- readRDS("test_yy_MCAR_10.rds")
-test_MCAR_20_y_hat <- readRDS("test_yy_MCAR_20.rds")
-test_MCAR_40_y_hat <- readRDS("test_yy_MCAR_40.rds")
-test_MCAR_60_y_hat <- readRDS("test_yy_MCAR_60.rds")
-test_MCAR_80_y_hat <- readRDS("test_yy_MCAR_80.rds")
-test_MCAR_90_y_hat <- readRDS("test_yy_MCAR_90.rds")
-test_MCAR_95_y_hat <- readRDS("test_yy_MCAR_95.rds")
+test_DEPY_5_y_hat <- readRDS("test_yy_DEPY_5.rds")
+test_DEPY_10_y_hat <- readRDS("test_yy_DEPY_10.rds")
+test_DEPY_20_y_hat <- readRDS("test_yy_DEPY_20.rds")
+test_DEPY_40_y_hat <- readRDS("test_yy_DEPY_40.rds")
+test_DEPY_60_y_hat <- readRDS("test_yy_DEPY_60.rds")
+test_DEPY_80_y_hat <- readRDS("test_yy_DEPY_80.rds")
+test_DEPY_90_y_hat <- readRDS("test_yy_DEPY_90.rds")
+test_DEPY_95_y_hat <- readRDS("test_yy_DEPY_95.rds")
 
 # We read the real y_values
 test_comp <- readRDS("COMP/test_COMP.rds")
-test_MCAR_5 <- readRDS("MCAR/test_MCAR_X4_5_.rds")
-test_MCAR_10 <- readRDS("MCAR/test_MCAR_X4_10_.rds")
-test_MCAR_20 <- readRDS("MCAR/test_MCAR_X4_20_.rds")
-test_MCAR_40 <- readRDS("MCAR/test_MCAR_X4_40_.rds")
-test_MCAR_60 <- readRDS("MCAR/test_MCAR_X4_60_.rds")
-test_MCAR_80 <- readRDS("MCAR/test_MCAR_X4_80_.rds")
-test_MCAR_90 <- readRDS("MCAR/test_MCAR_X4_90_.rds")
-test_MCAR_95 <- readRDS("MCAR/test_MCAR_X4_95_.rds")
+test_DEPY_5 <- readRDS("DEPY/test_DEPY_X4_5_.rds")
+test_DEPY_10 <- readRDS("DEPY/test_DEPY_X4_10_.rds")
+test_DEPY_20 <- readRDS("DEPY/test_DEPY_X4_20_.rds")
+test_DEPY_40 <- readRDS("DEPY/test_DEPY_X4_40_.rds")
+test_DEPY_60 <- readRDS("DEPY/test_DEPY_X4_60_.rds")
+test_DEPY_80 <- readRDS("DEPY/test_DEPY_X4_80_.rds")
+test_DEPY_90 <- readRDS("DEPY/test_DEPY_X4_90_.rds")
+test_DEPY_95 <- readRDS("DEPY/test_DEPY_X4_95_.rds")
 
 test_comp_y <- test_comp[,1]
-test_MCAR_5_y <- test_MCAR_5[,1]
-test_MCAR_10_y <- test_MCAR_10[,1]
-test_MCAR_20_y <- test_MCAR_20[,1]
-test_MCAR_40_y <- test_MCAR_40[,1]
-test_MCAR_60_y <- test_MCAR_60[,1]
-test_MCAR_80_y <- test_MCAR_80[,1]
-test_MCAR_90_y <- test_MCAR_90[,1]
-test_MCAR_95_y <- test_MCAR_95[,1]
+test_DEPY_5_y <- test_DEPY_5[,1]
+test_DEPY_10_y <- test_DEPY_10[,1]
+test_DEPY_20_y <- test_DEPY_20[,1]
+test_DEPY_40_y <- test_DEPY_40[,1]
+test_DEPY_60_y <- test_DEPY_60[,1]
+test_DEPY_80_y <- test_DEPY_80[,1]
+test_DEPY_90_y <- test_DEPY_90[,1]
+test_DEPY_95_y <- test_DEPY_95[,1]
 
 Err0 <- Err5 <- Err10 <- Err20 <- Err40 <- Err60 <- Err80 <- Err90 <- Err95 <- matrix(rep(0,200000), ncol = 2000)
 
 for (j in 1:2000){
   Err0[,j] <- test_comp_y_hat[,j]-test_comp_y[j]
-  Err5[,j] <- test_MCAR_5_y_hat[,j]-test_MCAR_5_y[j]
-  Err10[,j] <- test_MCAR_10_y_hat[,j]-test_MCAR_10_y[j]
-  Err20[,j] <- test_MCAR_20_y_hat[,j]-test_MCAR_20_y[j]
-  Err40[,j] <- test_MCAR_40_y_hat[,j]-test_MCAR_40_y[j]
-  Err60[,j] <- test_MCAR_60_y_hat[,j]-test_MCAR_60_y[j]
-  Err80[,j] <- test_MCAR_80_y_hat[,j]-test_MCAR_80_y[j]
-  Err90[,j] <- test_MCAR_90_y_hat[,j]-test_MCAR_90_y[j]
-  Err95[,j] <- test_MCAR_95_y_hat[,j]-test_MCAR_95_y[j]
+  Err5[,j] <- test_DEPY_5_y_hat[,j]-test_DEPY_5_y[j]
+  Err10[,j] <- test_DEPY_10_y_hat[,j]-test_DEPY_10_y[j]
+  Err20[,j] <- test_DEPY_20_y_hat[,j]-test_DEPY_20_y[j]
+  Err40[,j] <- test_DEPY_40_y_hat[,j]-test_DEPY_40_y[j]
+  Err60[,j] <- test_DEPY_60_y_hat[,j]-test_DEPY_60_y[j]
+  Err80[,j] <- test_DEPY_80_y_hat[,j]-test_DEPY_80_y[j]
+  Err90[,j] <- test_DEPY_90_y_hat[,j]-test_DEPY_90_y[j]
+  Err95[,j] <- test_DEPY_95_y_hat[,j]-test_DEPY_95_y[j]
 }
 
 for (i in c(0,5,10,20,40,60,80,90,95)){
