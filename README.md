@@ -14,6 +14,6 @@ The file Create_datasets contains the codes to create the training datasets and 
 Finally, the file Calculate_MSE contains the codes to calculate the MSE.
 
 ---
-**License**: All the code is under the [GNU GPL v3](https://www.gnu.org/licenses/gpl.html) license or any posterior version.
+**License**: All the codes are under the [GNU GPL v3](https://www.gnu.org/licenses/gpl.html) license or any posterior version.
 
 :copyright: (21-05-2021) Irving Gómez Méndez.
